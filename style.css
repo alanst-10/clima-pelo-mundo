@@ -46,7 +46,7 @@ h1 {
 }
 
 .resultado {
-    width: 300px;
+    width: 363px;
     display: none;
     border: 1px dotted #FFF;
     margin-top: 20px;
@@ -76,18 +76,28 @@ h1 {
     text-align: center;
 }
 .tempTitulo,
-.ventoTitulo {
+.ventoTitulo,
+.titulo-min,
+.titulo-max,
+.nascerTitulo,
+.porTitulo {
     color: #777;
     font-size: 16px;
     margin-bottom: 5px;
 }
 .tempInfo,
-.ventoInfo {
+.ventoInfo,
+.minima,
+.maxima,
+.nascerInfo,
+.porInfo {
     color: #FFF;
     font-size: 30px;
     font-weight: bold;
 }
-.tempInfo sup {
+.tempInfo sup,
+.minima sup,
+.maxima sup {
     font-size: 15px;
     font-weight: normal;
 }
@@ -110,6 +120,40 @@ h1 {
     height: 1px;
     background-color: #FFF;
     transform-origin: left;
+}
+
+.variacao {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+
+.variacao .temp-min {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.variacao .temp-max {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nascer-por {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
+.nascer {
+    text-align: center;
+}
+
+.por {
+    text-align: center;
 }
 
 .aviso {

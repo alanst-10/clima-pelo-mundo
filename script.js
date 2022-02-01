@@ -20,7 +20,11 @@ document.querySelector('.busca').addEventListener('submit', async (event)=>{
             temp: json.main.temp,
             tempIcon: json.weather[0].icon,
             windSpeed: json.wind.speed,
-            windAngle: json.wind.deg
+            windAngle: json.wind.deg,
+            tempMin: json.main.temp_min,
+            tempMax: json.main.temp_max,
+            porDoSol: json.sys.sunset,
+            nascerDoSol: json.sys.sunrise
         })
     } else {
         clearInfo();
@@ -36,6 +40,10 @@ function showInfo(json) {
     document.querySelector('.temp img').setAttribute('src', `http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
     document.querySelector('.ventoInfo').innerHTML = `${json.windSpeed} <span>km/h</span>`;
     document.querySelector('.ventoPonto').style.transform = `rotate(${json.windAngle - 90}deg)`;
+    document.querySelector('.minima').innerHTML = `${json.tempMin} <sup>ºC</sup>`;
+    document.querySelector('.maxima').innerHTML = `${json.tempMax} <sup>ºC</sup>`;
+    // document.querySelector('.nascerInfo').innerHTML = `${json.nascerDoSol}`;
+    // document.querySelector('.porInfo').innerHTML = `${json.porDoSol}`;
     document.querySelector('.resultado').style.display = 'block';
 }
 

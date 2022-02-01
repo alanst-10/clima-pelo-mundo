@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/sun.png" type="image/x-icon">
 </head>
 <body>
     <h1>Clima</h1>
 
     <form class="busca">
-        <input type="search" id="searchInput" />
+        <input type="search" id="searchInput" placeholder="Informe o nome da cidade"/>
         <button>Buscar</button>
     </form>
 
@@ -24,6 +25,16 @@
                 <div class="tempInfo">-- <sup>ºC</sup></div>
                 <img src="http://openweathermap.org/img/wn/10d@2x.png" />
             </div>
+            <div class="variacao">
+                <div class="temp-min">
+                    <div class="titulo-min">Mínima</div>
+                    <div class="minima">-- <sup>ºC</sup></div>    
+                </div>
+                <div class="temp-max">
+                    <div class="titulo-max">Máxima</div>
+                    <div class="maxima">-- <sup>ºC</sup></div>
+                </div>
+            </div>
             <div class="vento">
                 <div class="ventoTitulo">Vento</div>
                 <div class="ventoInfo">-- <span>km/h</span></div>
@@ -32,11 +43,21 @@
                 </div>
             </div>
         </div>
+        
+        <!-- <div class="nascer-por">
+            <div class="nascer">
+                <div class="nascerTitulo">Nascer do sol</div>
+                <div class="nascerInfo">06:00</div>
+            </div>
+            <div class="por">
+                <div class="porTitulo">Pôr do sol</div>
+                <div class="porInfo">19:34</div>
+            </div>
+            
+        </div> -->
     </div>
 
     <div class="aviso"></div>
-
-    <footer>Criado pela B7Web</footer>
 
     <script src="script.js"></script>
 </body>
