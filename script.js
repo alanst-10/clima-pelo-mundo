@@ -47,14 +47,16 @@ function showInfo(json) {
     let date2 = new Date(unix_timestamp2 * 1000);
     let hour2 = date2.getHours();
     let minute2 = date2.getMinutes();
-    let timeformated2 = `${hour2}:${minute2}`;
+    let timeformated2 = `${fixZero(hour2)}:${fixZero(minute2)}`;
+
     document.querySelector('.nascerInfo').innerHTML = `${timeformated2}`;
 
     let unix_timestamp = json.porDoSol;
     let date = new Date(unix_timestamp * 1000);
     let hour = date.getHours();
     let minute = date.getMinutes();
-    let timeformated = `${hour}:${minute}`;
+    let timeformated = `${fixZero(hour)}:${fixZero(minute)}`;
+
     document.querySelector('.porInfo').innerHTML = `${timeformated}`;
 
     document.querySelector('.resultado').style.display = 'block';
@@ -69,3 +71,6 @@ function showWarning(msg) {
     document.querySelector('.aviso').innerHTML = msg;
 }
 
+function fixZero(time) {
+    return time < 10 ? `0${time}` : time;
+}
